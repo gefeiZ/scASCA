@@ -20,7 +20,7 @@ df <- df %>%
     AF = Count_Pos / (Total_Count + 0.00001), 
     AF_dev = AF - 0.5 
   ) %>%
-  filter(Total_Count >= 3) # 简单的深度过滤
+  filter(Total_Count >= 3) 
 
 
 feature_stats <- df %>%
@@ -103,7 +103,7 @@ n_sig <- sum(results_final$fdr < 0.05)
 message("High-Confidence ASCA Hits: ", n_sig)
 
 hits <- results_final %>% filter(fdr < 0.05)
-#save hits
+#SAVE !
 
 ########################
 
